@@ -1,0 +1,81 @@
+img{
+    height: 400px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+figure{
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0;
+margin-inline-end: 0;
+}
+
+.frame{
+    padding : 30px;
+    border-radius: 15px;
+}
+
+div {
+    background-color: #b8e3f4;
+}
+
+html{
+    background-color: #b8e3f4; 
+}
+
+header, footer {
+    background-color: #b8e3f4;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center; 
+}
+
+footer {
+    background-color: #b8e3f4;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+#toto{
+    margin: 0 auto;
+    display: grid; 
+    grid-template-rows: auto;
+    grid-template-columns: 400px 500px 400px;
+    gap: 10px; 
+}
+
+#bio{
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 2;
+
+}
+
+#summary{
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 1;
+
+}
+
+#album{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+
+}
+
+#ba{
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 3;
+}
+
+.frame{
+    background-color:rgb(130, 204, 212);
+    max-width: 500px ;
+}
