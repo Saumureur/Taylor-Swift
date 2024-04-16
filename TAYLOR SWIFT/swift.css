@@ -6,11 +6,11 @@ img{
     justify-content: center
 }
 
-figure{
-margin-block-start: 1em;
-margin-block-end: 1em;
-margin-inline-start: 0;
-margin-inline-end: 0;
+    figure{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 
 .frame{
@@ -66,10 +66,9 @@ footer {
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 3;
-
 }
 
-#ba{
+#ba{    
     grid-row-start: 3;
     grid-row-end: 5;
     grid-column-start: 3;
