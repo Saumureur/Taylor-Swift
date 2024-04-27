@@ -1,0 +1,47 @@
+
+<!-- Sur la page d'album (album.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Album</title>
+</head>
+
+  <body>
+    <h1 id="albumName">Album Name</h1>
+    <h2>Songs</h2>
+    <ul id="songsList">
+      <!-- Les noms des chansons seront ajoutés ici dynamiquement -->
+    </ul>
+  </body>
+  
+  <script src="./albums.js"></script>
+  <script>
+    // Récupérer le nom de l'album depuis l'URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const albumName = urlParams.get('album');
+  
+    // Récupérer les données de l'album correspondant depuis votre source de données (albums.js)
+    const albumData = albums.find(album => album.name.replace(/\s+/g, '-').toLowerCase() === albumName);
+  
+    // Afficher le contenu de l'album
+    if (albumData) {
+      // Afficher le nom de l'album
+      document.getElementById('albumName').innerText = albumData.name;
+  
+      // Afficher les noms des chansons de l'album
+      const songsList = document.getElementById('songsList');
+      albumData.songs.forEach(song => {
+        const li = document.createElement('li');
+        li.textContent = song.name;
+        songsList.appendChild(li);
+      });
+    } else {
+      // Gérer le cas où l'album n'est pas trouvé
+      console.error('Album not found.');
+    }
+  </script>
+  
+</body>
+</html>
